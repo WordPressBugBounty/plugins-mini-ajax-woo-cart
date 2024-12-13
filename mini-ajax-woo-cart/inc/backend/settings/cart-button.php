@@ -32,7 +32,7 @@
                             <label for="majc_floatmenu_default_icon"><?php esc_html_e('Choose Open Icon', 'mini-ajax-cart'); ?></label>
                             <?php
                             $inputName = 'majc_settings[cart_basket][open_available_icon]';
-                            $iconName = isset($cart_basket['open_available_icon']) ? $cart_basket['open_available_icon'] : NULL; //icon value from db
+                            $iconName = isset($cart_basket['open_available_icon']) ? $cart_basket['open_available_icon'] : null; //icon value from db
                             $this->icon_field($inputName, $iconName);
                             ?>
                         </li>
@@ -40,7 +40,7 @@
                             <label for="majc_floatmenu_default_icon"><?php esc_html_e('Choose Close Icon', 'mini-ajax-cart'); ?></label>
                             <?php
                             $inputName = 'majc_settings[cart_basket][close_available_icon]';
-                            $iconName = isset($cart_basket['close_available_icon']) ? $cart_basket['close_available_icon'] : NULL; //icon value from db
+                            $iconName = isset($cart_basket['close_available_icon']) ? $cart_basket['close_available_icon'] : null; //icon value from db
                             $this->icon_field($inputName, $iconName);
                             ?>
                         </li>

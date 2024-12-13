@@ -70,7 +70,7 @@
     <div class="majc-settings-row">
         <label><?php esc_html_e('Content Width', 'mini-ajax-cart'); ?></label>
         <div class="majc-settings-fields">
-            <input type="number" name="majc_settings[content_width]" value="<?php echo isset($majc_settings['content_width']) ? intval($majc_settings['content_width']) : NULL; ?>"> px
+            <input type="number" name="majc_settings[content_width]" value="<?php echo isset($majc_settings['content_width']) ? intval($majc_settings['content_width']) : null; ?>"> px
         </div>
     </div>
 

@@ -64,7 +64,7 @@ if (!class_exists('MAJC_Backend')) {
                 'capability_type' => 'post',
                 'has_archive' => false,
                 'hierarchical' => false,
-                'menu_position' => NULL,
+                'menu_position' => null,
                 'supports' => array('title')
             );
 

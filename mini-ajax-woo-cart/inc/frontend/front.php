@@ -2,7 +2,7 @@
 global $post;
 
 if (!empty($post)) {
-    $current_page_id = is_front_page() ? NULL : ($post ? $post->ID : NULL);
+    $current_page_id = is_front_page() ? null : ($post ? $post->ID : null);
 
     if (class_exists('WooCommerce') && is_shop()) {
         $current_page_id = wc_get_page_id('shop');
@@ -15,7 +15,7 @@ if (!empty($post)) {
     }
 
     $current_archive = is_front_page() ? 'front' : ($post ? $post->post_type : get_queried_object()->name);
-    $current_post_type = is_archive() ? NULL : $current_archive;
+    $current_post_type = is_archive() ? null : $current_archive;
 
     $query = new WP_Query(array('post_type' => 'ultimate-woo-cart', 'posts_per_page' => -1));
 
@@ -47,15 +47,15 @@ if (!empty($post)) {
                 $enable_overlay = isset($majc_settings['enable_overlay']) ? $majc_settings['enable_overlay'] : 'off';
 
                 // Header Settings
-                $header = isset($majc_settings['header']) ? $majc_settings['header'] : NULL;
+                $header = isset($majc_settings['header']) ? $majc_settings['header'] : null;
                 $header_title = isset($header['title_text']) ? $header['title_text'] : '';
                 $header_icon_type = isset($header['icon_type']) ? $header['icon_type'] : 'default_icon';
-                $header_available_icon = isset($header['available_icon']) ? $header['available_icon'] : NULL;
-                $header_custom_icon = isset($header['custom_icon']) ? $header['custom_icon'] : NULL;
+                $header_available_icon = isset($header['available_icon']) ? $header['available_icon'] : null;
+                $header_custom_icon = isset($header['custom_icon']) ? $header['custom_icon'] : null;
                 $header_show_total_items = isset($header['show_cart_item_count']) ? $header['show_cart_item_count'] : 'off';
 
                 // Buttons Settings
-                $buttons = isset($majc_settings['buttons']) ? $majc_settings['buttons'] : NULL;
+                $buttons = isset($majc_settings['buttons']) ? $majc_settings['buttons'] : null;
                 $show_view_cart = isset($buttons['show_view_cart']) ? $buttons['show_view_cart'] : 'off';
                 $show_checkout = isset($buttons['show_checkout']) ? $buttons['show_checkout'] : 'off';
                 $show_continue_shopping = isset($buttons['show_continue_shopping']) ? $buttons['show_continue_shopping'] : 'off';
@@ -66,34 +66,34 @@ if (!empty($post)) {
                 $shipping_text = isset($buttons['shipping_text']) ? $buttons['shipping_text'] : esc_html__('To find out your shipping cost , Please proceed to checkout.', 'mini-ajax-cart');
 
                 // Coupon Settings
-                $coupon = isset($majc_settings['coupon']) ? $majc_settings['coupon'] : NULL;
+                $coupon = isset($majc_settings['coupon']) ? $majc_settings['coupon'] : null;
                 $enable_coupon = isset($coupon['enable']) ? $coupon['enable'] : 'off';
                 $apply_coupon_btn_text = isset($coupon['button_text']) ? $coupon['button_text'] : esc_html__('Apply Coupon', 'mini-ajax-cart');
                 $promocode_placeholder = isset($coupon['promocode_placeholder']) ? $coupon['promocode_placeholder'] : esc_html__('Enter your promo code', 'mini-ajax-cart');
 
                 // Cart Basket Settings
-                $cart_basket = isset($majc_settings['cart_basket']) ? $majc_settings['cart_basket'] : NULL;
+                $cart_basket = isset($majc_settings['cart_basket']) ? $majc_settings['cart_basket'] : null;
                 $cart_basket_icon_type = isset($cart_basket['icon_type']) ? $cart_basket['icon_type'] : 'default_icon';
-                $cart_basket_open_available_icon = isset($cart_basket['open_available_icon']) ? $cart_basket['open_available_icon'] : NULL;
-                $cart_basket_open_custom_icon = isset($cart_basket['open_custom_icon']) ? $cart_basket['open_custom_icon'] : NULL;
-                $cart_basket_close_available_icon = isset($cart_basket['close_available_icon']) ? $cart_basket['close_available_icon'] : NULL;
-                $cart_basket_close_custom_icon = isset($cart_basket['close_custom_icon']) ? $cart_basket['close_custom_icon'] : NULL;
-                $cart_basket_shape = isset($cart_basket['shape']) ? $cart_basket['shape'] : NULL;
+                $cart_basket_open_available_icon = isset($cart_basket['open_available_icon']) ? $cart_basket['open_available_icon'] : null;
+                $cart_basket_open_custom_icon = isset($cart_basket['open_custom_icon']) ? $cart_basket['open_custom_icon'] : null;
+                $cart_basket_close_available_icon = isset($cart_basket['close_available_icon']) ? $cart_basket['close_available_icon'] : null;
+                $cart_basket_close_custom_icon = isset($cart_basket['close_custom_icon']) ? $cart_basket['close_custom_icon'] : null;
+                $cart_basket_shape = isset($cart_basket['shape']) ? $cart_basket['shape'] : null;
                 $cart_basket_product_count = isset($cart_basket['product_count']) ? $cart_basket['product_count'] : 'off';
-                $cart_basket_hover_animation = isset($cart_basket['hover_animation']) && $cart_basket['hover_animation'] != 'none' ? $cart_basket['hover_animation'] : NULL;
+                $cart_basket_hover_animation = isset($cart_basket['hover_animation']) && $cart_basket['hover_animation'] != 'none' ? $cart_basket['hover_animation'] : null;
 
                 // Summary Settings
-                $summary = isset($majc_settings['summary']) ? $majc_settings['summary'] : NULL;
+                $summary = isset($majc_settings['summary']) ? $majc_settings['summary'] : null;
                 $hide_cart_total = isset($summary['hide_cart_total']) ? $summary['hide_cart_total'] : 'off';
                 $hide_discount = isset($summary['hide_discount']) ? $summary['hide_discount'] : 'off';
                 $hide_subtotal = isset($summary['hide_subtotal']) ? $summary['hide_subtotal'] : 'off';
 
                 // Custom Settings
-                $custom = isset($majc_settings['custom']) ? $majc_settings['custom'] : NULL;
+                $custom = isset($majc_settings['custom']) ? $majc_settings['custom'] : null;
 
                 // Display Settings
                 $specific_pages = isset($majc_settings['display']['specific_pages']) && !empty($majc_settings['display']['specific_pages']) ? $majc_settings['display']['specific_pages'] : array();
-                $display_condition = isset($majc_settings['display']['display_condition']) ? $majc_settings['display']['display_condition'] : NULL;
+                $display_condition = isset($majc_settings['display']['display_condition']) ? $majc_settings['display']['display_condition'] : null;
                 $front_pages = isset($majc_settings['display']['front_pages']) ? $majc_settings['display']['front_pages'] : 'off';
                 $blog_pages = isset($majc_settings['display']['blog_pages']) ? $majc_settings['display']['blog_pages'] : 'off';
                 $error_pages = isset($majc_settings['display']['error_pages']) ? $majc_settings['display']['error_pages'] : 'off';

@@ -1,12 +1,12 @@
 <?php
-$display = isset($majc_settings['display']) ? $majc_settings['display'] : NULL;
-$header = isset($majc_settings['header']) ? $majc_settings['header'] : NULL;
-$buttons = isset($majc_settings['buttons']) ? $majc_settings['buttons'] : NULL;
-$coupon = isset($majc_settings['coupon']) ? $majc_settings['coupon'] : NULL;
-$summary = isset($majc_settings['summary']) ? $majc_settings['summary'] : NULL;
-$cart_basket = isset($majc_settings['cart_basket']) ? $majc_settings['cart_basket'] : NULL;
+$display = isset($majc_settings['display']) ? $majc_settings['display'] : null;
+$header = isset($majc_settings['header']) ? $majc_settings['header'] : null;
+$buttons = isset($majc_settings['buttons']) ? $majc_settings['buttons'] : null;
+$coupon = isset($majc_settings['coupon']) ? $majc_settings['coupon'] : null;
+$summary = isset($majc_settings['summary']) ? $majc_settings['summary'] : null;
+$cart_basket = isset($majc_settings['cart_basket']) ? $majc_settings['cart_basket'] : null;
 $animations = $this->majc_animations();
-$display = isset($majc_settings['display']) ? $majc_settings['display'] : NULL;
+$display = isset($majc_settings['display']) ? $majc_settings['display'] : null;
 ?>
 
 <div id="layout-settings" class="tab-content">

@@ -49,12 +49,12 @@ if (!class_exists('MAJC_Frontend')) {
 
         function change_item_qty() {
 
-            if ($this->checkNonce == 'false') {
+            if ($this->checkNonce() == 'false') {
                 return false;
             }
 
-            $c_key = isset($_REQUEST['ckey']) ? sanitize_text_field($_REQUEST['ckey']) : NULL;
-            $qty = isset($_REQUEST['qty']) ? sanitize_text_field($_REQUEST['qty']) : NULL;
+            $c_key = isset($_REQUEST['ckey']) ? sanitize_text_field($_REQUEST['ckey']) : null;
+            $qty = isset($_REQUEST['qty']) ? sanitize_text_field($_REQUEST['qty']) : null;
             WC()->cart->set_quantity($c_key, $qty, true);
             WC()->cart->set_session();
             die();
@@ -62,11 +62,11 @@ if (!class_exists('MAJC_Frontend')) {
 
         public function remove_coupon_code() {
 
-            if ($this->checkNonce == 'false') {
+            if ($this->checkNonce() == 'false') {
                 return false;
             }
 
-            $couponCode = isset($_POST['couponCode']) ? sanitize_text_field($_POST['couponCode']) : NULL;
+            $couponCode = isset($_POST['couponCode']) ? sanitize_text_field($_POST['couponCode']) : null;
 
             if (WC()->cart->remove_coupon($couponCode)) {
                 esc_html_e('Coupon Removed Successfully.', 'mini-ajax-cart');
@@ -90,11 +90,11 @@ if (!class_exists('MAJC_Frontend')) {
 
         public function addCouponCode() {
 
-            if ($this->checkNonce == 'false') {
+            if ($this->checkNonce() == 'false') {
                 return false;
             }
 
-            $code = isset($_POST['couponCode']) ? sanitize_text_field($_POST['couponCode']) : NULL;
+            $code = isset($_POST['couponCode']) ? sanitize_text_field($_POST['couponCode']) : null;
             $code = strtolower($code);
 
             /* Check if coupon code is empty */
@@ -263,7 +263,7 @@ if (!class_exists('MAJC_Frontend')) {
 
         public function get_refreshed_fragments() {
 
-            if ($this->checkNonce == 'false') {
+            if ($this->checkNonce() == 'false') {
                 return false;
             }
 
@@ -272,7 +272,7 @@ if (!class_exists('MAJC_Frontend')) {
 
         public function cart_remove_item() {
 
-            if ($this->checkNonce == 'false') {
+            if ($this->checkNonce() == 'false') {
                 return false;
             }
 

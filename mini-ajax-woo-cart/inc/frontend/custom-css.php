@@ -2,7 +2,7 @@
     <?php
     $custom_css = '';
     $custom_id = '#majc-main-wrapper-' . $post->ID;
-    $custom = isset($majc_settings['custom']) ? $majc_settings['custom'] : NULL;
+    $custom = isset($majc_settings['custom']) ? $majc_settings['custom'] : null;
 
     if (isset($custom['trigger_btn_bg_color']) && !empty($custom['trigger_btn_bg_color'])) {
         $custom_css .= "{$custom_id} .majc-toggle-button .majc-cartbasket-toggle-btn{background:{$custom['trigger_btn_bg_color']}}";
@@ -28,7 +28,7 @@
         $custom_css .= "{$custom_id} .majc-item-count-wrap{color:{$custom['cart_total_box_text_color']}}";
     }
 
-    $drawer_content_bg_type = isset($custom['drawer_content_bg_type']) && !empty($custom['drawer_content_bg_type']) ? $custom['drawer_content_bg_type'] : NULL;
+    $drawer_content_bg_type = isset($custom['drawer_content_bg_type']) && !empty($custom['drawer_content_bg_type']) ? $custom['drawer_content_bg_type'] : null;
 
     if ($drawer_content_bg_type == 'choose_color' && isset($custom['drawer_content_bg_color']) && !empty($custom['drawer_content_bg_color'])) {
         $custom_css .= "{$custom_id}.majc-layout-slidein .majc-cart-popup{background-color:{$custom['drawer_content_bg_color']}}";
